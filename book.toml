@@ -1,0 +1,6 @@
+[book]
+authors = ["Pavlo Yevtukhov"]
+language = "en"
+multilingual = false
+src = "src"
+title = "AdPlayer Lite iOS"
