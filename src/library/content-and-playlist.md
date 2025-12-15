@@ -7,8 +7,7 @@ Both content and playlists are only available for insteam tags.
 Playlist contains list of content videos that are played one after the other. We can read current playlist like this:
 
 ```swift
-let placement = AdPlacementView(pubId: pubId, tagId: tagId)
-let controller = placement.controller
+let controller: AdPlayerController = ...
 
 let playlist = controller.playlist.value // CAUTION: might not be loaded yet
 print(playlist)

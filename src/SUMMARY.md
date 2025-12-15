@@ -10,4 +10,5 @@
   - [Interstitial](library/interstitial-launch.md)
 - [Controlling Playback](library/control-playback.md)
 - [Instream: Content And Playlist](library/content-and-playlist.md)
+- [Instream: Content Override](library/content-override.md)
 - [Example App](example.md)

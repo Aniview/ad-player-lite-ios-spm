@@ -1,17 +1,31 @@
 # AdPlayerController
 
-The `AdPlayerController` is a key component of the AdPlayerLite SDK, designed to manage and control video playback within the `AdPlacementView`. This guide provides an overview of its features and how to use it effectively.
+The `AdPlayerController` is a key component of the AdPlayerLite SDK, designed to manage and control video playback within the `AdPlacementView`. This guide provides an overview of its features and how to use it effectively.  
+The `AdPlayerController` is used to interact with the player, observe its state, and control playback.
 
-## Accessing the AdPlayerController
+There are also more specialized controllers available:
 
-You can obtain an `AdPlayerController` instance from an `AdPlacementView` object:
+* AdPlayerInReadController - for working with in-read content
+* AdPlayerInterstitialController - for displaying interstitials
+
+## Creating Controller
 
 ```swift
-let placement = AdPlacementView(pubId: pubId, tagId: tagId)
+let controller = AdPlayer
+    .getTag(pubId: "<your pubId>", tagId: "<your tagId>")
+    .newInReadController()
+```
+## Accessing the AdPlayerController
+
+You can obtain an `AdPlayerController` instance from an `AdPlacementView`  
+(but it should be attached before. Otherwise it will be nil )
+
+```swift
+let placement = AdPlacementView()
+placement.attachController(controller)
+...
 let controller = placement.controller
 ```
-
-The `AdPlayerController` is used to interact with the player, observe its state, and control playback.
 
 ## Features
 
@@ -122,4 +136,3 @@ controller.eventsPublisher
 
 ## Conclusion
 The `AdPlayerController` provides comprehensive control over the playback of ads and content within the AdPlayerLite SDK. By understanding its features and using the provided methods and publishers, you can build a seamless and interactive video ad experience.
-
