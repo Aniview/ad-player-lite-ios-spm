@@ -10,7 +10,13 @@ class YourViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let placement = AdPlacementView(pubId: pubId, tagId: tagId)
+        let controller = AdPlayer
+            .getTag(pubId: "<your pubId>", tagId: "<your tagId>")
+            .newInReadController()
+
+        let placement = AdPlacementView()
+        placement.attachController(controller)
+
         placement.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(placement)
         NSLayoutConstraint.activate([
