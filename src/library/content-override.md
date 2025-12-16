@@ -1,4 +1,4 @@
-# In-Stream Content override
+# Instream: Content override
 
 To replace predefined In-Stream Content video:
 
@@ -8,7 +8,7 @@ let controller = tag.newInReadController {
     $0.contentOverride = .init(cmsId: "<custom video id>")
 }
 
-// Attach new controller to the placement view 
+// Attach new controller to the placement view
 let placement = AdPlacementView()
 placement.attachController(controller)
 
