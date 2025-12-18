@@ -39,7 +39,8 @@ import UIKit
 import AdPlayerLite
 
 // viewDidLoad
-let placement = AdPlacementView(pubId: pubId, tagId: tagId)
+let placement = AdPlacementView()
+...
 placement.delegate = self
 //
 
