@@ -5,10 +5,13 @@ To change some predefined In-Stream settings:
 ```swift
 let tag = AdPlayer.getTag(...)
 let controller = tag.newInReadController {
-    // Custom content cmsId will play instead of the video defined for the TAG
-    $0.contentOverride = .init(cmsId: "<custom video id>")
+    // override in-stream content by using CmsId
+    $0.contentOverride = .cmsId("<custom video cms id>")
 
-    // Only Content Video will play
+    // override in-stream content by using direct video url
+    $0.contentOverride = .directUrls(["<custom video URL>"])
+
+    // disable in-stream video ads
     $0.disableVideoAds = true
 }
 
