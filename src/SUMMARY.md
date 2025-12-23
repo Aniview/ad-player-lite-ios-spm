@@ -9,6 +9,7 @@
   - [SwiftUI](library/displaying-player-swiftui.md)
   - [Interstitial](library/interstitial-launch.md)
 - [Controlling Playback](library/control-playback.md)
+- [Fullscreen](library/fullscreen.md)
 - [Instream: Content And Playlist](library/content-and-playlist.md)
 - [Instream: Overriding Defaults](library/instream-overriding-defaults.md)
 - [Player Controls Visibility](library/player-controls-visibility.md)
