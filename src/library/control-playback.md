@@ -70,8 +70,14 @@ let controller = placement.controller
 - **Resume Playback**: `resume()`
   - Resumes playback if the player is paused.
 
-- **Skip Ad**: `skipAd()`
+- **Skip Playback**: `skipAd()`
   - Skips the currently playing ad, if any.
+
+- **Mute Playback**: `mute()`
+  - Mutes playbackd.
+
+- **Unmute Playback**: `unmute()`
+    - Un-mutes playback.
 
 ### Fullscreen Mode
 - **Toggle Fullscreen**: `toggleFullscreen()`

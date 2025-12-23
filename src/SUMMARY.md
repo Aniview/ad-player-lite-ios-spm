@@ -11,4 +11,5 @@
 - [Controlling Playback](library/control-playback.md)
 - [Instream: Content And Playlist](library/content-and-playlist.md)
 - [Instream: Overriding Defaults](library/instream-overriding-defaults.md)
+- [Player Controls Visibility](library/player-controls-visibility.md)
 - [Example App](example.md)
