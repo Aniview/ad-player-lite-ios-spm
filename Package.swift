@@ -3,7 +3,7 @@
 
 import PackageDescription
 
-private let artifactVersion = "1.2.0"
+private let artifactVersion = "1.3.0"
 
 let package = Package(
     name: "ad-player-lite-sources",
@@ -29,7 +29,7 @@ let package = Package(
             name: "AdPlayerLite",
             url:
                 "https://github.com/Aniview/ad-player-lite-ios-spm/releases/download/v\(artifactVersion)/AdPlayerLite.zip",
-            checksum: "eb26396f7f43d45825a3e29ebaf06c6db87cfb71ca9b9be898ceaa1f41f8dbab"
+            checksum: "ecf96c95dc8665c0fe02b3c0829c31e4e08fc08850f8a9349db6f91e56584681"
         )
     ]
 )
