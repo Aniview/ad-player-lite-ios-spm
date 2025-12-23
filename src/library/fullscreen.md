@@ -4,7 +4,8 @@ Normally, the player transitions to full-screen mode when the user taps the full
 It’s also possible to present the player in full-screen mode programmatically.
 
 ## Fullscreen toggle
-Each button can be hidden or shown:
+The following shows how to toggle full-screen mode programmatically:
+
 ```swift
 let controller: AdPlayerController
 controller.toggleFullscreen()
