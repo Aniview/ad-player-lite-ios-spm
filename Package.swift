@@ -29,7 +29,7 @@ let package = Package(
             name: "AdPlayerLite",
             url:
                 "https://github.com/Aniview/ad-player-lite-ios-spm/releases/download/v\(artifactVersion)/AdPlayerLite.zip",
-            checksum: "deb9c7940dbce172d9d4a8eb12e0af55bd59f7b1c52447089b3e7480a3e36e93"
+            checksum: "e07abe886e70e093ff3344205988ba0954af131087b2aca56e5fd4ec9b6c7a26"
         )
     ]
 )
