@@ -3,7 +3,7 @@
 
 import PackageDescription
 
-private let artifactVersion = "1.10.0"
+private let artifactVersion = "1.11.0"
 
 let package = Package(
     name: "ad-player-lite-sources",
@@ -14,14 +14,22 @@ let package = Package(
             targets: ["AdPlayerLiteTarget"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/googleads/swift-package-manager-google-interactive-media-ads-ios.git", from: "3.24.0")
+        .package(url: "https://github.com/googleads/swift-package-manager-google-interactive-media-ads-ios.git", from: "3.24.0"),
+        // OM SDK (Aniview partner build) — IAB doesn't publish it as an SPM package
+        // itself (raw XCFramework only), so it's re-hosted behind its own wrapper package.
+        .package(url: "https://github.com/Aniview/omsdk-ios-spm.git", from: "1.0.0")
     ],
     targets: [
         .target(
             name: "AdPlayerLiteTarget",
             dependencies: [
                 .target(name: "AdPlayerLite"),
-                .product(name: "GoogleInteractiveMediaAds", package: "swift-package-manager-google-interactive-media-ads-ios")
+                .product(name: "GoogleInteractiveMediaAds", package: "swift-package-manager-google-interactive-media-ads-ios"),
+                // Same treatment as GoogleInteractiveMediaAds above: it's a dynamic
+                // framework, not embedded inside AdPlayerLite.xcframework's own zip
+                // (make_artifacts.sh only zips AdPlayerLite.xcframework), so host apps
+                // need it declared here to be pulled in automatically.
+                .product(name: "OMSDK_Aniview", package: "omsdk-ios-spm")
             ],
             path: "PlaceHolder"
         ),
@@ -29,7 +37,7 @@ let package = Package(
             name: "AdPlayerLite",
             url:
                 "https://github.com/Aniview/ad-player-lite-ios-spm/releases/download/v\(artifactVersion)/AdPlayerLite.zip",
-            checksum: "5aa0367c4fe9835c1076f7001a57159c0832809cec7aa7c52984e22f1b63b744"
+            checksum: "f1db00f87b866601e3d8986e4bf16352e277ceb5c41c6cb7a16a2f81b88f863c"
         )
     ]
 )
