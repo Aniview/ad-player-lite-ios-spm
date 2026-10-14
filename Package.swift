@@ -29,7 +29,7 @@ let package = Package(
                 // framework, not embedded inside AdPlayerLite.xcframework's own zip
                 // (make_artifacts.sh only zips AdPlayerLite.xcframework), so host apps
                 // need it declared here to be pulled in automatically.
-                .product(name: "OMSDK_Aniview", package: "omsdk-ios-spm")
+                .product(name: "OMSDKKit", package: "omsdk-ios-spm")
             ],
             path: "PlaceHolder"
         ),
